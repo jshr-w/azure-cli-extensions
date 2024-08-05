@@ -813,6 +813,11 @@ def load_arguments(self, _):
             is_preview=True,
         )
         c.argument(
+            "enable_fqdn_policy",
+            action="store_true",
+            is_preview=True,
+        )
+        c.argument(
             "custom_ca_trust_certificates",
             options_list=["--custom-ca-trust-certificates", "--ca-certs"],
             is_preview=True,
@@ -1307,6 +1312,16 @@ def load_arguments(self, _):
         )
         c.argument(
             "disable_advanced_network_observability",
+            action="store_true",
+            is_preview=True,
+        )
+        c.argument(
+            "enable_fqdn_policy",
+            action="store_true",
+            is_preview=True,
+        )
+        c.argument(
+            "disable_fqdn_policy",
             action="store_true",
             is_preview=True,
         )
